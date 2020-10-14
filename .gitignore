@@ -1,0 +1,3 @@
+#third-party-api
+!third-party-api/import.sh
+third-party-api/**
