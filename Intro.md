@@ -18,7 +18,7 @@ ____
 | ----------------- | -------------------------------------------------------- |
 | QQMusic           | Depending on the deployment environment                  |
 | NeteaseCloudMusic | Depending on the deployment environment                  |
-| GoogleTranslate   | https://translation.googleapis.com/language/translate/v2 |
+| Youdao translate  | http://fanyi.youdao.com/openapi.do                        |
 | bilibili          | http://bilibili-service.daoapp.io                        |
 
 ## 3.Module Relationship
