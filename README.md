@@ -91,10 +91,10 @@ cd backend
 ### Get lyrics
 
 - Details: get the lyrics to the selected music
-- Interface address: /api/lyrics GET
+- Interface address: /api/lyrics/{songId} GET
 - Required parameters: songId
 - Optional parameters: none
-- Example:  /api/lyrics?id=123456
+- Example:  /api/lyrics/123456
 
 ### Translate 
 
@@ -112,7 +112,9 @@ cd backend
 
 - Required parameters: keyword
 
-- Optional parameters:order, page
+- Optional parameters:order(default: totalrank), page(default: 1)
+
+    
 
     | order | Comprehensive Ranking | totalrank |
     | ----- | --------------------- | --------- |
@@ -129,7 +131,7 @@ cd backend
 ### Play music
 
 - Details: Play the selected music
-- Interface address: /api/play GET
+- Interface address: /api/play/{id} GET
 - Required parameters: id
 - Optional parameters: none
-- Example: /api/play?id=33894312
+- Example: /api/play/33894312
