@@ -3,30 +3,11 @@ package api;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-class Song{
-    public int type;
-    public String artist;
-    public String id;
-    public String name;
-
-    public Song(int _type, String _artist, String _id, String _name){
-        type = _type;
-        artist = _artist;
-        id = _id;
-        name = _name;
-    }
-
-    public void setSong(int _type, String _artist, String _id, String _name){
-        type = _type;
-        artist = _artist;
-        id = _id;
-        name = _name;
-    }
-}
 
 @RestController
 @RequestMapping("/api")
@@ -52,10 +33,12 @@ public class SearchMusicController {
         return res.get("response").get("data").get("song").get("list");
     }
 
-    @RequestMapping(value = "/search/music", method = RequestMethod.GET, params = "key")
+    @RequestMapping(value = "/search/music", method = RequestMethod.GET, params = "key"
+            , produces = {"application/xml;charset=UTF-8"})
     @ResponseBody
-    public ArrayList<Song> searchMusic(@RequestParam(value = "key")String key){
-        ArrayList<Song> res = new ArrayList<Song>(10);
+    public SongXml searchMusic(@RequestParam(value = "key")String key){
+        SongXml songXml = new SongXml(10);
+        ArrayList<Song> res = songXml.songs;
         ArrayList neteaseSongs = searchNeteaseMusic(key);
         for(int i = 0; i < 5; i++){
             LinkedHashMap temMap = (LinkedHashMap) neteaseSongs.get(i);
@@ -74,6 +57,6 @@ public class SearchMusicController {
             String artist = artists.get(0).get("name").toString();
             res.add(new Song(1, artist, mid, name));
         }
-        return res;
+        return songXml;
     }
 }

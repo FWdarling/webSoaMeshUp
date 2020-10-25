@@ -64,7 +64,7 @@ cd backend
 
 ----
 
-### Search music
+### Search music(return XML)
 
 - Details: search for music by keyword
 - Interface address: /api/search/music  GET
@@ -88,7 +88,7 @@ cd backend
 - Optional parameters: type( 0(default)--Netease, 1--QQ)
 - Example:  /api/lyrics/123456?type=1
 
-### Translate 
+### Translate (parse XML)
 
 - Details: translate lyrics and music name 
 - Interface address: /api/translate GET
