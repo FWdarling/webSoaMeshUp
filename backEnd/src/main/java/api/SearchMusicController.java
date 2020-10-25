@@ -76,10 +76,4 @@ public class SearchMusicController {
         }
         return res;
     }
-
-    @RequestMapping(value = "/")
-    @ResponseBody
-    public String test(){
-        return "hello!";
-    }
 }

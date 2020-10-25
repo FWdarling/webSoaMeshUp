@@ -72,14 +72,6 @@ cd backend
 - Optional parameters: none
 - Example: /api/search/music?key=loseyourself
 
-### Search Tips
-
-- Details: get search tips
-- Interface address: /api/search/tips GET
-- Required parameters: key
-- Optional parameters: none
-- Example: /api/search/tips?key=loseyourself
-
 ### Hot search list
 
 - Details: get the hot search list
@@ -92,9 +84,9 @@ cd backend
 
 - Details: get the lyrics to the selected music
 - Interface address: /api/lyrics/{songId} GET
-- Required parameters: songId
-- Optional parameters: none
-- Example:  /api/lyrics/123456
+- Required parameters: songId, type
+- Optional parameters: type( 0(default)--Netease, 1--QQ)
+- Example:  /api/lyrics/123456?type=1
 
 ### Translate 
 
@@ -133,5 +125,5 @@ cd backend
 - Details: Play the selected music
 - Interface address: /api/play/{id} GET
 - Required parameters: id
-- Optional parameters: none
+- Optional parameters: type( 0(default)--Netease, 1--QQ)
 - Example: /api/play/33894312
