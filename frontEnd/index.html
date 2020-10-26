@@ -5,36 +5,45 @@
         <meta charset="utf-8">
         <title>Music Cloud</title>
         <link rel = "icon" href = "images/avatar.jpg">
-    </head>
+        <link rel="stylesheet" type="text/css" href="css/button.css" />
+        <link rel="stylesheet" type="text/css" href="css/dropdown.css" />
+        <link rel="stylesheet" type="text/css" href="css/box.css" />
+        <link rel="stylesheet" type="text/css" href="css/table.css" />
+        <link rel="stylesheet" type="text/css" href="css/list.css" />
     <body>
-        <div>
+        <div style="text-align: center;">
             <h1>Music Cloud</h1>
         </div>
         <br>
         <div>
-            <p>
+            <p style="vertical-align:middle;text-align: center;">
                 <input type="text" id="searchIn" class = "textIn">
-                <select id = "searchType" name="searchType" class = "dropdown-select">
+                <select id = "searchType" name="searchType" class="round">
                     <option value="music">music</option>
                     <option value="video">video</option>
                 </select>
-                <button id = "searchBtn" type="button" class = "btn" onclick="search()">
-                    <img id = "playBtnImg" src="">
+                <button id = "searchBtn" type="button" class = "btn striped-shadow white" onclick="search()">
+                    <span>搜索</span>
                 </button>
-                <button id = "translateBtn" type="button" class = "btn" onclick="translated()">翻译</button>
+                <button id = "translateBtn" type="button" class = "btn striped-shadow white" onclick="translated()">
+                    <span>翻译</span>
+                </button>
             </p>
-            <p>
+            <p style="vertical-align:middle; text-align: center;">
                 <span id="translation" class = "textBox">显示译文</span>
             </p>
         </div>
         <br>
-        <div class = "scrollList">
+        <br>
+        <div class = "scrollList" style="text-align: center;">
             <span class = "textBox">热搜推荐</span>
             <ul id = "hotList" class = "list">
             </ul>
         </div>
-        <div class = "scrollList">
+        <div class = "scrollList" style="text-align: center;">
             <span class = "textBox">搜索结果</span>
+            <br>
+            <br>
             <table id="table" class="table table-hover table-mc-light-blue">
                 <thead id = "typeTable">
                   <tr id = "typeTr">
@@ -50,7 +59,7 @@
               </table>
         </div>
         <br>
-        <div class = "scrollList">
+        <div class = "scrollList" style="text-align: center;">
             <span class = "textBox">歌词</span>
             <ul id = "lyrics" class = "list">
                 <li>暂无歌曲</li>
@@ -59,17 +68,19 @@
         <div class = "bottomDiv">
             <span id="title">请选择歌曲</span>
             <input type="text" id="titleIn" class = "textIn" value = "请输入歌曲id并选择type" onfocus="func()" onblur="func1()">
-            <select id = "searchTypePlay" name="searchTypePlay" class = "dropdown-select">
+            <select id = "searchTypePlay" name="searchTypePlay" class="round">
                 <option value="0">0</option>
                 <option value="1">1</option>
             </select>
-            <button id="selectBtn" type="button" class="btn" onclick="select()">
-                选择
+            <button id="selectBtn" type="button" class="btn striped-shadow white" onclick="select()">
+                <span>选择</span>
             </button>
-            <button id="playBtn" type="button" class="btn" onclick="play()">
-                <img id = "playBtnImg" src="">
+            <button id="playBtn" type="button" class="btn striped-shadow white" onclick="play()">
+                <span>播放</span>
             </button>
         </div>
+            
+          
         <script src="js/main.js"></script>
     </body>
 </html>

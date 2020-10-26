@@ -10,6 +10,8 @@ ______
 
 **Technology stack**: springmvc+spring+springboot+java jdk1.8+maven
 
+**GitHub repo**: https://github.com/FWdarling/webSoaMeshUp
+
 ## 1. Introduction
 
 ----
@@ -22,21 +24,21 @@ This project is based on Netease Cloud music and combined with QQ music to enric
 
 ----
 
-#### Access directly through the web page
+### Access directly through the web page
 
-Enter the following url to visit the api
+open index.html to access our home page
+
+### Enter the following url to visit the api
 
 http://fwdarling2020.cn:8080/ + api
 
-#### Or deploy the backend locally
+#### deploy the backend locally
 
 ##### Clone Source Code from my github
 
 ```
 git clone https://github.com/FWdarling/webSoaMeshUp
 ```
-
-
 
 ##### Start the third-party interface
 
@@ -59,7 +61,7 @@ cd backend
 ./mvnw spring-boot:run
 ```
 
-##### Now you can open frontend homepage to use the web application
+
 
 
 
@@ -243,4 +245,4 @@ src.main.java.api.SearchMusicController.java
     }
 ```
 
-## 5. Display
+## 
