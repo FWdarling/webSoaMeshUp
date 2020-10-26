@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
         <meta charset="utf-8">
         <title>Music Cloud</title>
         <link rel = "icon" href = "images/avatar.jpg">
@@ -12,7 +13,7 @@
         <br>
         <div>
             <p>
-                <input type="text" id="searchIn" class = "textBox">
+                <input type="text" id="searchIn" class = "textIn">
                 <select id = "searchType" name="searchType" class = "dropdown-select">
                     <option value="music">music</option>
                     <option value="video">video</option>
@@ -20,7 +21,7 @@
                 <button id = "searchBtn" type="button" class = "btn" onclick="search()">
                     <img id = "playBtnImg" src="">
                 </button>
-                <button id = "translateBtn" type="button" class = "btn" onclick="translate()">翻译</button>
+                <button id = "translateBtn" type="button" class = "btn" onclick="translated()">翻译</button>
             </p>
             <p>
                 <span id="translation" class = "textBox">显示译文</span>
@@ -28,36 +29,47 @@
         </div>
         <br>
         <div class = "scrollList">
+            <span class = "textBox">热搜推荐</span>
             <ul id = "hotList" class = "list">
-                <li>hot list1</li>
             </ul>
         </div>
         <div class = "scrollList">
-            <table id="tbody">
-                <colgroup>
-                    <col width="50">
-                    <col width="100">
-                    <col width="100">
-                    <col width="100">
-                    <col width="100">
-                    <col width="300">
-                </colgroup>
-                <tbody>
-                
+            <span class = "textBox">搜索结果</span>
+            <table id="table" class="table table-hover table-mc-light-blue">
+                <thead id = "typeTable">
+                  <tr id = "typeTr">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id = "contentTable">
+
                 </tbody>
-            </table>
+              </table>
         </div>
         <br>
         <div class = "scrollList">
+            <span class = "textBox">歌词</span>
             <ul id = "lyrics" class = "list">
-                <li>请选择歌曲</li>
+                <li>暂无歌曲</li>
             </ul>
         </div>
         <div class = "bottomDiv">
             <span id="title">请选择歌曲</span>
+            <input type="text" id="titleIn" class = "textIn" value = "请输入歌曲id并选择type" onfocus="func()" onblur="func1()">
+            <select id = "searchTypePlay" name="searchTypePlay" class = "dropdown-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <button id="selectBtn" type="button" class="btn" onclick="select()">
+                选择
+            </button>
             <button id="playBtn" type="button" class="btn" onclick="play()">
                 <img id = "playBtnImg" src="">
             </button>
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>
