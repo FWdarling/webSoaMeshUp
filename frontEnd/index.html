@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>Music Cloud</title>
+        <link rel = "icon" href = "images/avatar.jpg">
+    </head>
+    <body>
+        <div>
+            <h1>Music Cloud</h1>
+        </div>
+        <br>
+        <div>
+            <p>
+                <input type="text" id="searchIn" class = "textBox">
+                <select id = "searchType" name="searchType" class = "dropdown-select">
+                    <option value="music">music</option>
+                    <option value="video">video</option>
+                </select>
+                <button id = "searchBtn" type="button" class = "btn" onclick="search()">
+                    <img id = "playBtnImg" src="">
+                </button>
+                <button id = "translateBtn" type="button" class = "btn" onclick="translate()">翻译</button>
+            </p>
+            <p>
+                <span id="translation" class = "textBox">显示译文</span>
+            </p>
+        </div>
+        <br>
+        <div class = "scrollList">
+            <ul id = "hotList" class = "list">
+                <li>hot list1</li>
+            </ul>
+        </div>
+        <div class = "scrollList">
+            <table id="tbody">
+                <colgroup>
+                    <col width="50">
+                    <col width="100">
+                    <col width="100">
+                    <col width="100">
+                    <col width="100">
+                    <col width="300">
+                </colgroup>
+                <tbody>
+                
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class = "scrollList">
+            <ul id = "lyrics" class = "list">
+                <li>请选择歌曲</li>
+            </ul>
+        </div>
+        <div class = "bottomDiv">
+            <span id="title">请选择歌曲</span>
+            <button id="playBtn" type="button" class="btn" onclick="play()">
+                <img id = "playBtnImg" src="">
+            </button>
+        </div>
+    </body>
+</html>
