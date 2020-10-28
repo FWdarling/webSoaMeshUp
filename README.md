@@ -8,7 +8,7 @@ ______
 
 **Tutor:** Liu Yan
 
-**Technology stack**: springmvc+spring+springboot+java jdk1.8+maven
+**Technology stack**: backend: springmvc+spring+springboot+java jdk1.8+maven     frontend: html + css + js + jquery
 
 **GitHub repo**: https://github.com/FWdarling/webSoaMeshUp
 
